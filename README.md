@@ -31,7 +31,7 @@ So you can use it like:
 document.getElementById('my-table').innerHTML = renderHTMLTable(matrix);
 ````
 
-4. create a function calledFillSequence which will return a
+4. create a function `matrixFillSequence` which will return a
 new array, based on the `matrix` but its values will be 0 to 15 like so:
 
 ````js
@@ -46,6 +46,6 @@ new array, based on the `matrix` but its values will be 0 to 15 like so:
 and then use it like:
 
 ````js
-var newMatrix = calledFillSequence(matrix);
+var newMatrix = called matrixFillSequence(matrix);
 document.getElementById('my-table').innerHTML = renderHTMLTable(newMatrix);
 ````

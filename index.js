@@ -117,3 +117,29 @@ function matrixFillRowNum(data) {
 
 newMatrix = matrixFillRowNum(createMatrix(5, 2));
 document.querySelector('#step-5').textContent = renderPlainText(newMatrix);
+
+
+
+function matrixFillColNum(data) {
+  // var returned = [];
+  // for (var r = 0; r < data.length; r++) {
+  //   var counter = 0;
+  //   returned[r] = [];
+  //   for (var c = 0; c < data[r].length; c++) {
+  //     returned[r].push(c);
+  //   }
+  //   counter++;
+  // }
+  // return returned;
+
+  return data.map(function(columns) {
+    return columns.map(function(cell, columnNum) {
+      return columnNum;
+    });
+  });
+}
+
+newMatrix = matrixFillColNum(createMatrix(2, 5));
+document.querySelector('#step-6').textContent = renderPlainText(newMatrix);
+
+

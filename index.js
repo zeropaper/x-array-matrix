@@ -45,7 +45,7 @@ document.querySelector('#step-2').textContent = renderPlainText(createMatrix(4, 
 
 
 
-function renderHTMLBodyString(data) {
+function renderTableHTMLString(data) {
   var htmlString = '';
 
   data.forEach(function(columns) {
@@ -61,7 +61,7 @@ function renderHTMLBodyString(data) {
   return htmlString;
 }
 
-document.querySelector('#step-3').innerHTML = renderHTMLBodyString(createMatrix(4, 4));
+document.querySelector('#step-3').innerHTML = renderTableHTMLString(createMatrix(4, 4));
 
 
 
@@ -91,7 +91,7 @@ function matrixFillSequence(data) {
 }
 
 var newMatrix = matrixFillSequence(createMatrix(4, 4));
-document.getElementById('step-4').innerHTML = renderHTMLBodyString(newMatrix);
+document.getElementById('step-4').innerHTML = renderTableHTMLString(newMatrix);
 
 
 

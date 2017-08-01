@@ -40,7 +40,8 @@ function renderPlainText(data) {
   // return rows.join('\n');
 }
 
-document.querySelector('#step-2').textContent = renderPlainText(createMatrix(4, 4));
+var newMatrix = createMatrix(4, 4);
+document.querySelector('#step-2').textContent = renderPlainText(newMatrix);
 
 
 
@@ -61,7 +62,8 @@ function renderTableHTMLString(data) {
   return htmlString;
 }
 
-document.querySelector('#step-3').innerHTML = renderTableHTMLString(createMatrix(4, 4));
+newMatrix = createMatrix(4, 4);
+document.querySelector('#step-3').innerHTML = renderTableHTMLString(newMatrix);
 
 
 
@@ -90,7 +92,7 @@ function matrixFillSequence(data) {
   // });
 }
 
-var newMatrix = matrixFillSequence(createMatrix(4, 4));
+newMatrix = matrixFillSequence(createMatrix(4, 4));
 document.getElementById('step-4').innerHTML = renderTableHTMLString(newMatrix);
 
 

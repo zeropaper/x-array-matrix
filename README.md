@@ -42,7 +42,7 @@ And then use it like:
 
 ````js
 var newMatrix = createMatrix(4, 4);
-document.querySelector('#step-2').textContent = renderPlainText();
+document.querySelector('#step-2').textContent = renderPlainText(newMatrix);
 ````
 
 __BONUS__: use .map(), .join()
@@ -57,7 +57,7 @@ So you can use it like:
 
 ````js
 newMatrix = createMatrix(4, 4);
-document.querySelector('#step-3').innerHTML = renderTableHTMLString();
+document.querySelector('#step-3').innerHTML = renderTableHTMLString(newMatrix);
 ````
 
 ### Step 4

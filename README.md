@@ -41,7 +41,8 @@ __Note__: to create a new line in a string, you should use `\n`.
 And then use it like:
 
 ````js
-document.querySelector('#step-2').textContent = renderPlainText(createMatrix(4, 4));
+var newMatrix = createMatrix(4, 4);
+document.querySelector('#step-2').textContent = renderPlainText();
 ````
 
 __BONUS__: use .map(), .join()
@@ -55,7 +56,8 @@ add an empty `table` element to your HTML create a new function called
 So you can use it like:
 
 ````js
-document.querySelector('#step-3').innerHTML = renderTableHTMLString(createMatrix(4, 4));
+newMatrix = createMatrix(4, 4);
+document.querySelector('#step-3').innerHTML = renderTableHTMLString();
 ````
 
 ### Step 4
@@ -75,7 +77,7 @@ new array, based on the `matrix` but its values will be 0 to 15 like so:
 and then use it like:
 
 ````js
-var newMatrix = matrixFillSequence(createMatrix(4, 4));
+newMatrix = matrixFillSequence(createMatrix(4, 4));
 document.getElementById('step-4').innerHTML = renderTableHTMLString(newMatrix);
 ````
 

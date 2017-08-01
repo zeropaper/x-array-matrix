@@ -131,7 +131,7 @@ produce nested arrays like
 ````
 
 ````js
-newMatrix = matrixFillRowNum(createMatrix(2, 5));
+newMatrix = matrixFillColNum(createMatrix(2, 5));
 document.querySelector('#step-6').textContent = renderPlainText(newMatrix);
 ````
 

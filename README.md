@@ -50,9 +50,9 @@ __BONUS__: use .map(), .join()
 
 ### Step 3
 
-add an empty `table` element to your HTML create a new function called
-`renderTableHTMLString` which will create the HTML **string** for
-`tr` elements (rows) and `td` elements (columns) which contain the value (`0`).
+create a new function called `renderTableHTMLString` which will create
+the HTML **string** for `tr` elements (rows) and `td` elements (columns)
+which contain the value (`0`).
 So you can use it like:
 
 ````js
@@ -159,7 +159,7 @@ and produces
 create a function called `matrixFillText` which adds 1 to all values of the matrix.
 
 ````js
-var text = 'abcdefghijkl';
+var text = 'abcdefghijklmnopqrstuvwxyz';
 newMatrix = createMatrix(3, 5);
 newMatrix = matrixFillText(newMatrix, text);
 document.querySelector('#step-8').innerHTML = renderTableHTMLString(newMatrix);
@@ -179,8 +179,7 @@ k l m n o
 Create a function which will fill a `table` element with DOM only
 
 ````js
-var text = 'abcdefghijkl';
 newMatrix = createMatrix(3, 5)
-newMatrix = matrixFillText(, text);
+newMatrix = matrixFillText(newMatrix, text); // text is defined above ;)
 renderTableDom(document.querySelector('#bonus'), newMatrix);
 ````

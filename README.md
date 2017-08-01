@@ -50,12 +50,12 @@ __BONUS__: use .map(), .join()
 ### Step 3
 
 add an empty `table` element to your HTML create a new function called
-`renderHTMLBodyString` which will create the HTML **string** for
+`renderTableHTMLString` which will create the HTML **string** for
 `tr` elements (rows) and `td` elements (columns) which contain the value (`0`).
 So you can use it like:
 
 ````js
-document.querySelector('#step-3').innerHTML = renderHTMLBodyString(createMatrix(4, 4));
+document.querySelector('#step-3').innerHTML = renderTableHTMLString(createMatrix(4, 4));
 ````
 
 ### Step 4
@@ -76,7 +76,7 @@ and then use it like:
 
 ````js
 var newMatrix = matrixFillSequence(createMatrix(4, 4));
-document.getElementById('step-4').innerHTML = renderHTMLBodyString(newMatrix);
+document.getElementById('step-4').innerHTML = renderTableHTMLString(newMatrix);
 ````
 
 ### Step 5
@@ -130,7 +130,7 @@ create a function called `matrixIncrement` which adds 1 to all values of the mat
 ````js
 newMatrix = matrixFillSequence(createMatrix(3, 5));
 newMatrix = matrixIncrement(newMatrix);
-document.querySelecto('step-7').innerHTML = renderHTMLBodyString(newMatrix);
+document.querySelecto('step-7').innerHTML = renderTableHTMLString(newMatrix);
 ````
 
 and produces
@@ -150,7 +150,7 @@ create a function called `matrixFillText` which adds 1 to all values of the matr
 var text = 'abcdefghijkl';
 newMatrix = createMatrix(3, 5);
 newMatrix = matrixFillText(newMatrix, text);
-document.querySelecto('step-8').innerHTML = renderHTMLBodyString(newMatrix);
+document.querySelecto('step-8').innerHTML = renderTableHTMLString(newMatrix);
 ````
 
 and produces

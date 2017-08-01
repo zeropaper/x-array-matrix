@@ -11,6 +11,10 @@
   - a `table` element with an `id` `step-3`
   - a `table` element with an `id` `step-4`
   - a `pre` element with an `id` `step-5`
+  - a `pre` element with an `id` `step-6`
+  - a `table` element with an `id` `step-7`
+  - a `table` element with an `id` `step-8`
+  - a `table` element with an `id` `bonus`
 - Create a `index.js`
 - Declare an array variable called `matrix` which is made of
   4 arrays containing 4 times `0` (use 2 `for` loops for that).
@@ -114,6 +118,57 @@ produce nested arrays like
 ]
 ````
 
+````js
+newMatrix = matrixFillRowNum(createMatrix(2, 5));
+document.querySelecto('step-6').textContent = renderPlainText(newMatrix);
+````
+
+### Step 7
+
+create a function called `matrixIncrement` which adds 1 to all values of the matrix.
+
+````js
+newMatrix = matrixFillSequence(createMatrix(3, 5));
+newMatrix = matrixIncrement(newMatrix);
+document.querySelecto('step-7').innerHTML = renderHTMLBodyString(newMatrix);
+````
+
+and produces
+
+````
+1  2  3  4  5
+6  7  8  9  10
+11 12 13 14 15
+````
+
+
+### Step 8
+
+create a function called `matrixFillText` which adds 1 to all values of the matrix.
+
+````js
+var text = 'abcdefghijkl';
+newMatrix = createMatrix(3, 5);
+newMatrix = matrixFillText(newMatrix, text);
+document.querySelecto('step-8').innerHTML = renderHTMLBodyString(newMatrix);
+````
+
+and produces
+
+````
+a b c d e
+f g h i j
+k l m n o
+````
+
+
 ### SUPER BONUS OF DEATH
 
 Create a function which will fill a `table` element with DOM only
+
+````js
+var text = 'abcdefghijkl';
+newMatrix = createMatrix(3, 5)
+newMatrix = matrixFillText(, text);
+renderTableDom(document.querySelecto('bonus'), newMatrix);
+````

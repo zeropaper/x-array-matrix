@@ -42,7 +42,7 @@ And then use it like:
 
 ````js
 var newMatrix = createMatrix(4, 4);
-document.querySelector('#step-2').textContent = renderPlainText();
+document.querySelector('#step-2').textContent = renderPlainText(newMatrix);
 ````
 
 __BONUS__: use .map(), .join()
@@ -50,14 +50,14 @@ __BONUS__: use .map(), .join()
 
 ### Step 3
 
-add an empty `table` element to your HTML create a new function called
-`renderTableHTMLString` which will create the HTML **string** for
-`tr` elements (rows) and `td` elements (columns) which contain the value (`0`).
+create a new function called `renderTableHTMLString` which will create
+the HTML **string** for `tr` elements (rows) and `td` elements (columns)
+which contain the value (`0`).
 So you can use it like:
 
 ````js
 newMatrix = createMatrix(4, 4);
-document.querySelector('#step-3').innerHTML = renderTableHTMLString();
+document.querySelector('#step-3').innerHTML = renderTableHTMLString(newMatrix);
 ````
 
 ### Step 4
@@ -71,6 +71,16 @@ new array, based on the `matrix` but its values will be 0 to 15 like so:
   [4, 5, 6, 7],
   [8, 9, 10, 11],
   [12, 13, 14, 15]
+]
+````
+
+OR!! (if your matrix is 3x3)
+
+````js
+[
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8]
 ]
 ````
 
@@ -149,7 +159,7 @@ and produces
 create a function called `matrixFillText` which adds 1 to all values of the matrix.
 
 ````js
-var text = 'abcdefghijkl';
+var text = 'abcdefghijklmnopqrstuvwxyz';
 newMatrix = createMatrix(3, 5);
 newMatrix = matrixFillText(newMatrix, text);
 document.querySelector('#step-8').innerHTML = renderTableHTMLString(newMatrix);
@@ -169,8 +179,7 @@ k l m n o
 Create a function which will fill a `table` element with DOM only
 
 ````js
-var text = 'abcdefghijkl';
 newMatrix = createMatrix(3, 5)
-newMatrix = matrixFillText(, text);
+newMatrix = matrixFillText(newMatrix, text); // text is defined above ;)
 renderTableDom(document.querySelector('#bonus'), newMatrix);
 ````

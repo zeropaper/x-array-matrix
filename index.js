@@ -41,3 +41,24 @@ function renderPlainText(data) {
 }
 
 document.querySelector('#step-2').textContent = renderPlainText(createMatrix(4, 4));
+
+
+
+
+function renderHTMLBodyString(data) {
+  var htmlString = '';
+
+  data.forEach(function(columns) {
+    htmlString += '<tr>';
+
+    columns.forEach(function(cell) {
+      htmlString += '<td>' + cell + '</td>';
+    });
+
+    htmlString += '</tr>';
+  });
+
+  return htmlString;
+}
+
+document.querySelector('#step-3').innerHTML = renderHTMLBodyString(createMatrix(4, 4));

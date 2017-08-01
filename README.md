@@ -74,6 +74,16 @@ new array, based on the `matrix` but its values will be 0 to 15 like so:
 ]
 ````
 
+OR!! (if your matrix is 3x3)
+
+````js
+[
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8]
+]
+````
+
 and then use it like:
 
 ````js

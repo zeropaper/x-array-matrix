@@ -145,3 +145,56 @@ newMatrix = matrixFillColNum(createMatrix(2, 5));
 document.querySelector('#step-6').textContent = renderPlainText(newMatrix);
 
 
+
+
+
+
+function matrixIncrement(data) {
+  return data.map(function(columns, rowNum) {
+    return columns.map(function(cell, columnNum) {
+      return data[rowNum][columnNum] + 1;
+    });
+  });
+}
+
+newMatrix = matrixFillSequence(createMatrix(3, 5));
+newMatrix = matrixIncrement(newMatrix);
+document.querySelector('#step-7').innerHTML = renderTableHTMLString(newMatrix);
+
+
+
+
+function matrixFillText(data, string) {
+  var counter = -1;
+  return data.map(function(columns, rowNum) {
+    return columns.map(function(cell, columnNum) {
+      counter++;
+      return string[counter];
+    });
+  });
+}
+
+var text = 'abcdefghijklmnopqrstu';
+newMatrix = createMatrix(3, 5);
+newMatrix = matrixFillText(newMatrix, text);
+document.querySelector('#step-8').innerHTML = renderTableHTMLString(newMatrix);
+
+
+
+
+function renderTableDom(element, data) {
+  data.forEach(function(columns) {
+    var tr = document.createElement('tr');
+    columns.forEach(function(cell) {
+      var td = document.createElement('td');
+      td.textContent = cell;
+      tr.appendChild(td);
+    });
+    element.appendChild(tr);
+  });
+}
+
+
+newMatrix = createMatrix(3, 5)
+newMatrix = matrixFillText(newMatrix, text);
+renderTableDom(document.querySelector('#bonus'), newMatrix);

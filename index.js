@@ -152,7 +152,8 @@ document.querySelector('#step-6').textContent = renderPlainText(newMatrix);
 function matrixIncrement(data) {
   return data.map(function(columns, rowNum) {
     return columns.map(function(cell, columnNum) {
-      return data[rowNum][columnNum] + 1;
+      // cell === data[rowNum][columnNum]
+      return cell + 1;
     });
   });
 }
@@ -160,7 +161,6 @@ function matrixIncrement(data) {
 newMatrix = matrixFillSequence(createMatrix(3, 5));
 newMatrix = matrixIncrement(newMatrix);
 document.querySelector('#step-7').innerHTML = renderTableHTMLString(newMatrix);
-
 
 
 

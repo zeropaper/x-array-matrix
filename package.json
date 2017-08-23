@@ -1,0 +1,36 @@
+{
+  "name": "x-array-matrix",
+  "version": "1.0.0",
+  "description": "An introduction to unit testing",
+  "main": "src/index.js",
+  "scripts": {
+    "prebuild": "jshint src/*.js && mkdirp docs && cp src/index.html docs/",
+    "build": "browserify src/index.js -o docs/bundle.js",
+    "postbuild": "uglifyjs docs/bundle.js -o docs/bundle.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeropaper/x-array-matrix.git"
+  },
+  "keywords": [
+    "exercise",
+    "mocha",
+    "testing"
+  ],
+  "author": "Valentin Vago <zeropaper@irata.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeropaper/x-array-matrix/issues"
+  },
+  "homepage": "https://github.com/zeropaper/x-array-matrix#readme",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "cp": "^0.2.0",
+    "expect.js": "^0.3.1",
+    "jshint": "^2.9.5",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.5.0",
+    "uglify-js": "^3.0.28"
+  }
+}

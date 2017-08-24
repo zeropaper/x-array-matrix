@@ -45,5 +45,4 @@ describe('library', function() {
   it('has a renderTableDom function', function(){
     expect(lib.renderTableDom).to.be.a('function');
   });
-
 });

@@ -18,6 +18,6 @@ describe('createMatrix(rows, cols)', function() {
   it('creates the given amount of entries given by the second argument', function() {
     var result = createMatrix(1, 3);
     expect(result[0]).to.be.an('array');
-    expect(result[0].length).to.be(2);
+    expect(result[0].length).to.be(3);
   });
 });

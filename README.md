@@ -115,6 +115,13 @@ document.querySelector('#step-5').textContent = renderPlainText(newMatrix);
 
 The `pre` tag content will then be
 
+````
+0000
+1111
+2222
+3333
+````
+
 ### Step 6
 
 create an other function called `matrixFillColNum` which produces a
